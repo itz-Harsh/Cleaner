@@ -37,7 +37,6 @@ gui.press('enter')
 
 path = os.path.expanduser("~")
 name = os.path.basename(path)
-print(name)
 os.system(f"start C:\\Users\\{name}\\AppData\\Local\\Temp")
 t.sleep(1)
 gui.click(500, 600)
