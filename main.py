@@ -6,6 +6,7 @@ import time as t
 # Prefetch
 
 os.system("start C:\\Windows\\Prefetch")
+t.sleep(2)
 gui.press('enter')
 t.sleep(2)
 gui.click(500, 600)
