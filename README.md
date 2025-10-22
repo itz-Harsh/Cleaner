@@ -17,10 +17,6 @@ This project provides a simple, single-file Python utility aimed at power users 
 - 🐍 Python 3.x (recommended 3.8+)
 - No additional packages required for the core script
 
-Optional (only if you extend the project for GUI automation):
-
-- 🤖 `pyautogui` (install with `pip install pyautogui`)
-
 ## 🚀 Quick start
 
 1. (Optional) Create a virtual environment and activate it.
