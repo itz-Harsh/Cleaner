@@ -1,67 +1,24 @@
 import os
-import pyautogui as gui
 import time as t
 
-
-# Prefetch
-
-os.system("start C:\\Windows\\Prefetch")
-t.sleep(2)
-gui.press('enter')
-t.sleep(2)
-gui.click(500, 600)
-gui.hotkey('ctrl', 'a')
-gui.press('delete')
-t.sleep(3)
-gui.press('esc')
+os.system('del /f /s /q "C:\\Windows\\Prefetch\\*"')
 t.sleep(1)
-gui.press('enter')
-
-
-
-
-# Temp
-
-os.system("start C:\\Windows\\Temp")
-t.sleep(2)
-gui.click(500, 600)
-gui.hotkey('ctrl', 'a')
-gui.press('delete')
-t.sleep(3)
-gui.press('esc')
-t.sleep(1)
-gui.press('enter')
-
-
-
 
 # %temp%
 
-path = os.path.expanduser("~")
-name = os.path.basename(path)
-os.system(f"start C:\\Users\\{name}\\AppData\\Local\\Temp")
-t.sleep(2)
-gui.click(500, 600)
-gui.hotkey('ctrl', 'a')
-gui.press('delete')
-gui.press('enter')
-t.sleep(3)
-gui.press('esc')
+temp_path = os.path.join(os.environ['USERPROFILE'], 'AppData\\Local\\Temp')
+os.system(f'del /f /s /q "{temp_path}\\*"')
 t.sleep(1)
-gui.press('enter')
 
+# Windows Temp
 
-
-
-#Recycle Bin
-
-os.system("start shell:RecycleBinFolder")
-t.sleep(2)
-gui.click(500, 0)
-gui.hotkey('ctrl', 'a')
-gui.press('delete')
+os.system('del /f /s /q "C:\\Windows\\Temp\\*"')
 t.sleep(1)
-gui.press('enter')
-t.sleep(5)
-os.system("taskkill /f /im explorer.exe")
-os.system("start explorer.exe")
+
+# Recycle Bin
+
+os.system('rd /s /q "C:\\$Recycle.Bin"')
+t.sleep(1)
+
+
+        
