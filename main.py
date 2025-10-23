@@ -5,9 +5,9 @@ os.system('del /f /s /q "C:\\Windows\\Prefetch\\*"')
 t.sleep(1)
 
 # %temp%
-
-temp_path = os.path.join(os.environ['USERPROFILE'], 'AppData\\Local\\Temp')
-os.system(f'del /f /s /q "{temp_path}\\*"')
+path = os.path.expanduser("~")
+name = os.path.basename(path)
+os.system(f'''del /f /s /q "C:\\Users\\{name}\\AppData\\Local\\Temp\\*"''')
 t.sleep(1)
 
 # Windows Temp
