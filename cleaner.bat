@@ -10,7 +10,7 @@ start "" "C:\Windows\Prefetch"
 echo Prefetch Folder Opened
 :: close prefetch folder after continue
 timeout /t 5 >nul
-
+ 
 taskkill /im explorer.exe /f
 
 start explorer.exe
